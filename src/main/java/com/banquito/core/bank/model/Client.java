@@ -25,7 +25,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-@Table(name="CLIENT")
+@Table(name = "CLIENT")
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -86,7 +86,7 @@ public class Client {
     @Column(name = "MONTHLY_AVG_INCOME", precision = 17, scale = 2)
     private BigDecimal monthlyAvgIncome;
 
-    @Column(name = "NOTES",length = 1000)
+    @Column(name = "NOTES", length = 1000)
     private String notes;
 
     public Client(Integer id) {

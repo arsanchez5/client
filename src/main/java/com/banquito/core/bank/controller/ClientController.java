@@ -19,7 +19,7 @@ public class ClientController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Client>> findClient(){
+    public ResponseEntity<List<Client>> findClient() {
         try {
             return ResponseEntity.ok(this.service.obtainAllClients());
         } catch (RuntimeException rte) {

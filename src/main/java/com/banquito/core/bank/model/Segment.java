@@ -27,7 +27,7 @@ public class Segment {
     private String name;
     @Column(name="CLIENT_TYPE", length = 3, nullable = false )
     private String clientType; 
-    @Column(name="DESCRIPTION", length = 500, nullable = false )
+    @Column(name="DESCRIPTION", length = 500)
     private String description;
 
     public Segment(String code){

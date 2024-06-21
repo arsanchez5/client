@@ -54,7 +54,7 @@ public class ClientAddress {
     }
 
     @ManyToOne
-    @JoinColumn(name = "CLIENT_ID", referencedColumnName ="CLIENT_ID")
+    @JoinColumn(name = "CLIENT_ID", referencedColumnName = "CLIENT_ID")
     private Client client;
 
     @Override
@@ -82,5 +82,4 @@ public class ClientAddress {
         return true;
     }
 
-    
 }
