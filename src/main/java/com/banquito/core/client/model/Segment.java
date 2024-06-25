@@ -1,5 +1,6 @@
-package com.banquito.core.bank.model;
+package com.banquito.core.client.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -17,20 +18,20 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-@Table(name="SEGMENT")
-public class Segment {
+@Table(name = "SEGMENT")
+public class Segment implements Serializable {
 
     @Id
-    @Column(name="CODE_SEGMENT", length = 10, nullable = false )
+    @Column(name = "CODE_SEGMENT", length = 10, nullable = false)
     private String code;
-    @Column(name="NAME", length = 50, nullable = false )
+    @Column(name = "NAME", length = 50, nullable = false)
     private String name;
-    @Column(name="CLIENT_TYPE", length = 3, nullable = false )
-    private String clientType; 
-    @Column(name="DESCRIPTION", length = 500)
+    @Column(name = "CLIENT_TYPE", length = 3, nullable = false)
+    private String clientType;
+    @Column(name = "DESCRIPTION", length = 500)
     private String description;
 
-    public Segment(String code){
+    public Segment(String code) {
         this.code = code;
     }
 

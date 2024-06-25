@@ -1,13 +1,13 @@
-package com.banquito.core.bank;
+package com.banquito.core.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BankApplication {
+public class ClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BankApplication.class, args);
+		SpringApplication.run(ClientApplication.class, args);
 	}
 
 }

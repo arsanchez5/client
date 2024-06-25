@@ -1,8 +1,8 @@
-package com.banquito.core.bank.repository;
+package com.banquito.core.client.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.banquito.core.bank.model.Client;
+import com.banquito.core.client.model.Client;
 
 public interface ClientRepository extends JpaRepository<Client, Integer> {
 

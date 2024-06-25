@@ -1,20 +1,23 @@
-package com.banquito.core.bank.service;
+package com.banquito.core.client.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.banquito.core.bank.model.Client;
-import com.banquito.core.bank.model.ClientPhone;
-import com.banquito.core.bank.model.ClientAddress;
-import com.banquito.core.bank.model.Segment;
-import com.banquito.core.bank.repository.ClientAddressRepository;
-import com.banquito.core.bank.repository.ClientPhoneRepository;
-import com.banquito.core.bank.repository.ClientRepository;
-import com.banquito.core.bank.repository.SegmentRepository;
+import com.banquito.core.client.model.Client;
+import com.banquito.core.client.model.ClientPhone;
+import com.banquito.core.client.model.ClientAddress;
+import com.banquito.core.client.model.Segment;
+import com.banquito.core.client.repository.ClientAddressRepository;
+import com.banquito.core.client.repository.ClientPhoneRepository;
+import com.banquito.core.client.repository.ClientRepository;
+import com.banquito.core.client.repository.SegmentRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
+@Transactional
 public class CommonClientService {
 
     private ClientRepository clientRepository;

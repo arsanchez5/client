@@ -1,5 +1,6 @@
-package com.banquito.core.bank.model;
+package com.banquito.core.client.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -26,7 +27,7 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table(name = "CLIENT")
-public class Client {
+public class Client implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CLIENT_ID", nullable = false)
@@ -129,3 +130,4 @@ public class Client {
     }
 
 }
+

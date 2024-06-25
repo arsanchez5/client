@@ -1,15 +1,17 @@
-package com.banquito.core.bank.controller;
+package com.banquito.core.client.controller;
 
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.banquito.core.bank.model.Client;
-import com.banquito.core.bank.service.CommonClientService;
+import com.banquito.core.client.model.Client;
+import com.banquito.core.client.service.CommonClientService;
 
 @RestController
+@RequestMapping(path = "/clients")
 public class ClientController {
 
     private final CommonClientService service;

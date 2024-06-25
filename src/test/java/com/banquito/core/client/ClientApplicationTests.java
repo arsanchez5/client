@@ -1,10 +1,10 @@
-package com.banquito.core.bank;
+package com.banquito.core.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BankApplicationTests {
+class ClientApplicationTests {
 
 	@Test
 	void contextLoads() {

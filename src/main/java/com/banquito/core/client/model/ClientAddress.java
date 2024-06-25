@@ -1,4 +1,6 @@
-package com.banquito.core.bank.model;
+package com.banquito.core.client.model;
+
+import java.io.Serializable;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,9 +10,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.Getter;
 import lombok.ToString;
 
 @NoArgsConstructor
@@ -18,21 +20,30 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-@Table(name = "CLIENT_PHONE")
-public class ClientPhone {
+@Table(name = "CLIENT_ADDRESS")
+public class ClientAddress implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CLIENT_PHONE_ID", nullable = false)
+    @Column(name = "CLIENT_ADDRESS_ID", nullable = false)
     private Integer id;
 
     @Column(name = "CLIENT_ID")
     private Integer clientId;
 
-    @Column(name = "PHONE_TYPE", length = 3, nullable = false)
-    private String phoneType;
+    @Column(name = "TYPE_ADDRESS", length = 3, nullable = false)
+    private String typeAddress;
 
-    @Column(name = "PHONE_NUMBER", length = 20, nullable = false)
-    private String phoneNumber;
+    @Column(name = "LINE1", length = 100, nullable = false)
+    private String line1;
+
+    @Column(name = "LINE2", length = 100)
+    private String line2;
+
+    @Column(name = "LATITUDE")
+    private Float latitude;
+
+    @Column(name = "LONGITUDE")
+    private Float longitude;
 
     @Column(name = "IS_DEFAULT", nullable = false)
     private Boolean isDefault;
@@ -40,7 +51,7 @@ public class ClientPhone {
     @Column(name = "STATE", length = 3, nullable = false)
     private String state;
 
-    public ClientPhone(Integer id) {
+    public ClientAddress(Integer id) {
         this.id = id;
     }
 
@@ -64,7 +75,7 @@ public class ClientPhone {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        ClientPhone other = (ClientPhone) obj;
+        ClientAddress other = (ClientAddress) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
